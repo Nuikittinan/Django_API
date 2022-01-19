@@ -170,7 +170,7 @@ def get_somedata(request, parameter):
 
 @api_view(['GET', 'POST'])
 def get_temp(request, graphparameter):
-    queryset = DeviceAll.objects.values('hr','spo2','temp').order_by('-id')[:20]
+    queryset = DeviceAll.objects.values('hr','spo2','temp','create').order_by('-id')[:20]
     if graphparameter == 'parametegraph':
         serializer = TempSerializer(queryset, many = True)
     
