@@ -25,7 +25,7 @@ class DeviceSerializer(serializers.ModelSerializer):
 class TempSerializer(serializers.ModelSerializer):
     class Meta:
         model = DeviceAll
-        fields = ['hr','spo2','temp']
+        fields = ['hr','spo2','temp','create']
 
 # class Spo2Serializer(serializers.ModelSerializer):
 #     class Meta:
